@@ -11,6 +11,18 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->version();
+$app->get('/', function() use ($app) {
+    return "Lumen RESTful API By CoderExample (https://coderexample.com)";
+    
 });
+
+
+$app->post('usuario','UsuariosController@createUsuario');
+ 
+$app->put('usuario/{id}','UsuariosController@updateUsuario');
+ 	 
+$app->delete('usuario/{id}','UsuariosController@deleteUsuario');
+ 
+$app->get('usuario','UsuariosController@index');
+ 
+
